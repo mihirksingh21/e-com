@@ -19,9 +19,10 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
 
       if (raw) return priceValue.toString()
 
-      price = (priceValue / 100).toLocaleString('en-US', {
+      // Change currency to INR
+      price = (priceValue / 100).toLocaleString('en-IN', {
         style: 'currency',
-        currency: 'USD', // TODO: use `parsed.currency`
+        currency: 'INR', // Changed from USD to INR
       })
 
       if (priceType === 'recurring') {
