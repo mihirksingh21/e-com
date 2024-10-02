@@ -1,12 +1,12 @@
 export const inclusions = [
     {
       title: 'Free Shipping',
-      description: 'Free shipping for order above $150',
+      description: 'Free shipping for order above ₹150',
       icon: '/assets/icons/shipping.svg',
     },
     {
       title: 'Money Guarantee',
-      description: 'Within 30 days for an exchange',
+      description: 'Within 7 days for an exchange',
       icon: '/assets/icons/dollar.svg',
     },
     {
