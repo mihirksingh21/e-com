@@ -12,14 +12,17 @@ type CategoryCardProps = {
 }
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
-  const media = category.media as Media
-  const { setCategoryFilters } = useFilter()
+  const media = category.media as Media | null; // Ensure media can be null
+  const { setCategoryFilters } = useFilter();
+
+  // Check if media and media.url are valid
+  const backgroundImage = media && media.url ? `url(${media.url})` : undefined;
 
   return (
     <Link
       href="/products"
       className={classes.card}
-      style={{ backgroundImage: `url(${media.url})` }}
+      style={{ backgroundImage }}
       onClick={() => setCategoryFilters([category.id])}
     >
       <p className={classes.title}>{category.title}</p>
@@ -27,4 +30,4 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
   )
 }
 
-export default CategoryCard
+export default CategoryCard;
