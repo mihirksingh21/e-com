@@ -24,7 +24,7 @@ export const ProductSelect: React.FC<TextField> = props => {
       })
 
       const res = await productsFetch.json()
-
+      console.log(res)
       if (res?.data) {
         const fetchedProducts = res.data.reduce(
           (acc, item) => {
