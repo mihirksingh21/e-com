@@ -110,7 +110,7 @@ export const CartPage: React.FC<{
                   <p className={classes.cartTotal}>Grand Total</p>
                   <p className={classes.cartTotal}>{cartTotal.formatted}</p>
                 </div>
-
+ 
                 <Button
                   className={classes.checkoutButton}
                   href={user ? '/checkout' : '/login?redirect=%2Fcheckout'}
