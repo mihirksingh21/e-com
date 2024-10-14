@@ -1,7 +1,8 @@
 module.exports = {
-  root: true,
-  extends: ['plugin:@next/next/recommended', '@payloadcms'],
-  ignorePatterns: ['**/payload-types.ts'],
-  plugins: ['prettier'],
-  
-  }
+  printWidth: 100,
+  parser: 'typescript',
+  semi: false,
+  singleQuote: true,
+  trailingComma: 'all',
+  arrowParens: 'avoid',
+}
