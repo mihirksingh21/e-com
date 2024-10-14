@@ -1,7 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+
 import { Product } from '../../../payload/payload-types'
+
 import classes from './index.module.scss'
 
 export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boolean): string => {
@@ -15,10 +17,9 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
 
       if (raw) return priceValue.toString()
 
-      
-      price = (priceValue / 100).toLocaleString('en-IN', {
+      price = (priceValue / 100).toLocaleString('en-US', {
         style: 'currency',
-        currency: 'INR', 
+        currency: 'INR', // TODO: use `parsed.currency`
       })
 
       if (priceType === 'recurring') {
@@ -29,7 +30,7 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
         }`
       }
     } catch (e) {
-      console.error(`Cannot parse priceJSON`) 
+      console.error(`Cannot parse priceJSON`) // eslint-disable-line no-console
     }
   }
 
