@@ -259,7 +259,3 @@ To run Payload production build/admin panels follow outlined steps invoking buil
 
 ---
 
-This README provides comprehensive instructions on setting up and utilizing the Payload E-Commerce Template effectively!
-
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/552529/dfd60feb-83d3-497d-b1c5-46c007291097/paste.txt
