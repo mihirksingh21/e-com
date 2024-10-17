@@ -103,14 +103,14 @@ export const CartPage: React.FC<{
 
                 <div className={classes.row}>
                   <p className={classes.cartTotal}>Delivery Charge</p>
-                  <p className={classes.cartTotal}>₹0.00</p>
+                  <p className={classes.cartTotal}>$0</p>
                 </div>
 
                 <div className={classes.row}>
                   <p className={classes.cartTotal}>Grand Total</p>
                   <p className={classes.cartTotal}>{cartTotal.formatted}</p>
                 </div>
- 
+
                 <Button
                   className={classes.checkoutButton}
                   href={user ? '/checkout' : '/login?redirect=%2Fcheckout'}

@@ -14,8 +14,6 @@ import { generateMeta } from '../../_utilities/generateMeta'
 import { CartPage } from './CartPage'
 
 import classes from './index.module.scss'
-
-
 export const dynamic = 'force-dynamic'
 
 export default async function Cart() {
@@ -27,8 +25,9 @@ export default async function Cart() {
       slug: 'cart',
     })
   } catch (error) {
-     console.error(error)
+    console.error(error)
   }
+
   if (!page) {
     page = staticCart
   }
@@ -42,7 +41,7 @@ export default async function Cart() {
   try {
     settings = await fetchSettings()
   } catch (error) {
-console.error(error)
+    console.error(error)
   }
 
   return (
@@ -65,7 +64,6 @@ export async function generateMetadata(): Promise<Metadata> {
       slug: 'cart',
     })
   } catch (error) {
-    console.error(error)
   }
 
   if (!page) {
