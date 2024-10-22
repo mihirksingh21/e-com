@@ -2,7 +2,7 @@ version: '3'
 
 services:
   payload:
-    image: node:20-alpine
+    image: node:18-alpine
     ports:
       - '3000:3000'
     volumes:
@@ -12,8 +12,11 @@ services:
     command: sh -c "yarn install && yarn dev"
     depends_on:
       - mongo
-    env_file:
-      - .env
+    environment:
+      DATABASE_URI: mongodb://mongo:27017/payload
+      PORT: 3000
+      NODE_ENV: development
+      PAYLOAD_SECRET: TESTING
 
   mongo:
     image: mongo:latest
